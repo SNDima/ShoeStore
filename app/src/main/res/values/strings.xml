@@ -6,4 +6,9 @@
     <string name="signup">Sign up</string>
     <string name="enter_username">Enter username</string>
     <string name="enter_password">Enter password</string>
+    <string name="shoes_image">Shoes image</string>
+    <string name="choose_shoes_online"><![CDATA[Choose Shoes Online & Enjoy]]></string>
+    <string name="welcome_description">You can find and view any pair of shoes from our countless
+        number of super modern models</string>
+    <string name="get_started">Get Started</string>
 </resources>
