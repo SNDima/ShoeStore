@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/layout_welcome"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/choose_shoes_online"
-            android:textColor="@color/color_text_welcome_primary"
+            android:textColor="@color/textColor_primary"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,27 +39,28 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
             android:layout_marginEnd="32dp"
             android:text="@string/welcome_description"
             android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/button_welcome"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_welcome_title" />
+            app:layout_constraintTop_toBottomOf="@+id/text_welcome_title"
+            app:layout_constraintVertical_bias="0.15" />
 
         <Button
             android:id="@+id/button_welcome"
-            style="@style/Widget.AppCompat.Button.Colored"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/color_text_welcome_secondary"
-            android:text="@string/get_started"
+            android:text="@string/next"
+            android:textColor="@color/textColor_primary"
+            android:textSize="@dimen/text_size_button_welcome"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

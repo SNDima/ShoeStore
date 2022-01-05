@@ -4,8 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Projects/Android/Udacity - Android Kotlin Developer/1. Developing Android Apps with Kotlin - Part 1/ShoeStore/app/src/main/res/layout/activity_main.xml" value="0.2674772036474164" />
+        <entry key="..\:/Projects/Android/Udacity - Android Kotlin Developer/1. Developing Android Apps with Kotlin - Part 1/ShoeStore/app/src/main/res/layout/fragment_instruction.xml" value="0.5" />
         <entry key="..\:/Projects/Android/Udacity - Android Kotlin Developer/1. Developing Android Apps with Kotlin - Part 1/ShoeStore/app/src/main/res/layout/fragment_login.xml" value="0.3951081843838194" />
-        <entry key="..\:/Projects/Android/Udacity - Android Kotlin Developer/1. Developing Android Apps with Kotlin - Part 1/ShoeStore/app/src/main/res/layout/fragment_welcome.xml" value="0.25" />
+        <entry key="..\:/Projects/Android/Udacity - Android Kotlin Developer/1. Developing Android Apps with Kotlin - Part 1/ShoeStore/app/src/main/res/layout/fragment_welcome.xml" value="0.5" />
       </map>
     </option>
   </component>

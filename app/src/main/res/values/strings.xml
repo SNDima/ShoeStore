@@ -11,4 +11,9 @@
     <string name="welcome_description">You can find and view any pair of shoes from our countless
         number of super modern models</string>
     <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+    <string name="primary_text_on_instruction_screen">Choose any pair for you</string>
+    <string name="secondary_text_on_instructions_screen">Scroll up and down to look through all available
+        pairs of shoes. Tap any liked model to see its details.</string>
+    <string name="shoes_shop_image">Shoes shop image</string>
 </resources>
