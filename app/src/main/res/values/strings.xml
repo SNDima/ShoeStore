@@ -16,4 +16,10 @@
     <string name="secondary_text_on_instructions_screen">Scroll up and down to look through all available
         pairs of shoes. Tap any liked model to see its details.</string>
     <string name="shoes_shop_image">Shoes shop image</string>
+    <string name="shoe_name">Shoe name</string>
+    <string name="name">Name:</string>
+    <string name="company">Company:</string>
+    <string name="size">Size:</string>
+    <string name="shoe_company">Shoe company</string>
+    <string name="shoe_size">Shoe size</string>
 </resources>
