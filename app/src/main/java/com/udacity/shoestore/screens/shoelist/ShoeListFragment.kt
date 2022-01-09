@@ -25,6 +25,11 @@ class ShoeListFragment : Fragment() {
             inflater, R.layout.fragment_shoe_list, container, false
         )
 
+        val fab = binding.fab
+        fab.setOnClickListener { view ->
+            // TODO: Go to details
+        }
+
         viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)
 
         viewModel.shoes.observe(viewLifecycleOwner, { shoes ->
