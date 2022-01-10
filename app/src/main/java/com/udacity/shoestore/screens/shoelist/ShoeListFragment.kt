@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.databinding.ShoeItemBinding
@@ -26,8 +27,8 @@ class ShoeListFragment : Fragment() {
         )
 
         val fab = binding.fab
-        fab.setOnClickListener { view ->
-            // TODO: Go to details
+        fab.setOnClickListener {
+            findNavController().navigate(ShoeListFragmentDirections.actionShoeListToShoeDetails())
         }
 
         viewModel = ViewModelProvider(this).get(ShoeListViewModel::class.java)

@@ -32,7 +32,7 @@
             android:layout_marginTop="8dp"
             android:text="@{shoe.company}"
             android:textStyle="bold"
-            app:layout_constraintStart_toEndOf="@id/barrier"
+            app:layout_constraintStart_toEndOf="@id/barrier_on_shoe_item"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/shoe_company" />
 
@@ -84,7 +84,7 @@
             app:layout_constraintTop_toBottomOf="@id/text_size_label" />
 
         <androidx.constraintlayout.widget.Barrier
-            android:id="@+id/barrier"
+            android:id="@+id/barrier_on_shoe_item"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:barrierDirection="end"
