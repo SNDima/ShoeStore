@@ -3,6 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.udacity.shoestore.ApplicationViewModel" />
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_shoe_details"
         android:layout_width="match_parent"
@@ -59,6 +70,7 @@
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:text="@={shoe.company}"
             app:layout_constraintBaseline_toBaselineOf="@+id/text_company_label_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/barrier_on_details"
@@ -72,6 +84,7 @@
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:minHeight="48dp"
+            android:text="@={shoe.name}"
             app:layout_constraintBaseline_toBaselineOf="@+id/text_name_label_details"
             app:layout_constraintEnd_toEndOf="@+id/edit_company_on_details"
             app:layout_constraintStart_toStartOf="@+id/edit_company_on_details"
@@ -85,6 +98,7 @@
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
             android:minHeight="48dp"
+            android:text="@={`` + shoe.size}"
             app:layout_constraintBaseline_toBaselineOf="@+id/text_size_label_details"
             app:layout_constraintEnd_toEndOf="@+id/edit_name_on_details"
             app:layout_constraintStart_toStartOf="@+id/edit_name_on_details"
@@ -103,6 +117,7 @@
             android:maxLines="5"
             android:minLines="3"
             android:scrollbars="vertical"
+            android:text="@={shoe.description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_description_label_details"
@@ -114,6 +129,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="@android:string/cancel"
+            android:onClick="@{() -> viewModel.onCancel()}"
             app:layout_constraintEnd_toStartOf="@+id/button_save_details"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -126,6 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:text="@string/save"
+            android:onClick="@{() -> viewModel.onSave(shoe)}"
             app:layout_constraintBaseline_toBaselineOf="@+id/button_cancel_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".screens.welcome.WelcomeFragment">
+        tools:context=".WelcomeFragment">
 
         <ImageView
             android:id="@+id/image_welcome_shoes"
