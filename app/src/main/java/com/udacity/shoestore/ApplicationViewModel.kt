@@ -1,9 +1,11 @@
 package com.udacity.shoestore
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.models.Shoe
+import timber.log.Timber
 
 class ApplicationViewModel : ViewModel() {
 
@@ -20,6 +22,14 @@ class ApplicationViewModel : ViewModel() {
     private val _eventShoeCancel = MutableLiveData<Boolean>()
     val eventShoeCancel: LiveData<Boolean>
         get() = _eventShoeCancel
+
+    private val _eventLogin = MutableLiveData<Boolean>()
+    val eventLogin: LiveData<Boolean>
+        get() = _eventLogin
+
+    private val _eventOnboardingFinish = MutableLiveData<Boolean>()
+    val eventOnboardingFinish: LiveData<Boolean>
+        get() = _eventOnboardingFinish
 
     init {
         loadShoes()
@@ -87,6 +97,22 @@ class ApplicationViewModel : ViewModel() {
 
     fun onShoeCancelComplete() {
         _eventShoeCancel.value = false
+    }
+
+    fun onLogin() {
+        _eventLogin.value = true
+    }
+
+    fun onSignUp() {
+        _eventLogin.value = true
+    }
+
+    fun onLogout() {
+        _eventLogin.value = false
+    }
+
+    fun onOnboardingFinish() {
+        _eventOnboardingFinish.value = true
     }
 
 }

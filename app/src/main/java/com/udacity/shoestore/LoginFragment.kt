@@ -6,26 +6,30 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
 
 class LoginFragment : Fragment() {
 
+    private val viewModel: ApplicationViewModel by activityViewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         val binding: FragmentLoginBinding = DataBindingUtil.inflate(
-            inflater,R.layout.fragment_login, container, false)
+            inflater, R.layout.fragment_login, container, false
+        )
 
-        binding.buttonLogin.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
-        }
+        binding.viewModel = viewModel
 
-        binding.buttonSignup.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
-        }
+        viewModel.eventLogin.observe(viewLifecycleOwner, { loggedIn ->
+            if (loggedIn && findNavController().currentDestination?.id == R.id.login_destination) {
+                findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
+            }
+        })
 
         return binding.root
     }
