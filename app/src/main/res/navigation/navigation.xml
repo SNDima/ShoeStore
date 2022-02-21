@@ -33,7 +33,7 @@
         <action
             android:id="@+id/action_instruction_to_shoeList"
             app:destination="@id/shoe_list_destination"
-            app:popUpTo="@id/login_destination"
+            app:popUpTo="@id/welcome_destination"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
@@ -44,6 +44,11 @@
         <action
             android:id="@+id/action_shoeList_to_shoeDetails"
             app:destination="@id/shoe_details_destination" />
+        <action
+            android:id="@+id/action_shoeList_to_login"
+            app:destination="@id/login_destination"
+            app:popUpTo="@id/shoe_list_destination"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/shoe_details_destination"

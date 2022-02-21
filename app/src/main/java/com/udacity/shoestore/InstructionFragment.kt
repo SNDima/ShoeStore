@@ -25,11 +25,11 @@ class InstructionFragment : Fragment() {
 
         binding.viewModel = viewModel
 
-        viewModel.eventOnboardingFinish.observe(viewLifecycleOwner, { isFinished ->
-            if (isFinished && findNavController().currentDestination?.id == R.id.instruction_destination) {
+        viewModel.eventOnboardingFinish.observe(viewLifecycleOwner) { isFinished ->
+            if (isFinished) {
                 findNavController().navigate(InstructionFragmentDirections.actionInstructionToShoeList())
             }
-        })
+        }
 
         return binding.root
     }

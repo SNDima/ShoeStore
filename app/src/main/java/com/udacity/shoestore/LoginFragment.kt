@@ -25,11 +25,11 @@ class LoginFragment : Fragment() {
 
         binding.viewModel = viewModel
 
-        viewModel.eventLogin.observe(viewLifecycleOwner, { loggedIn ->
-            if (loggedIn && findNavController().currentDestination?.id == R.id.login_destination) {
+        viewModel.eventLogin.observe(viewLifecycleOwner) { loggedIn ->
+            if (loggedIn) {
                 findNavController().navigate(LoginFragmentDirections.actionLoginToWelcome())
             }
-        })
+        }
 
         return binding.root
     }
