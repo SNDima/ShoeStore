@@ -82,7 +82,7 @@ class ApplicationViewModel : ViewModel() {
     }
 
     fun onSave(newShoe: Shoe) {
-        shoeList.add(newShoe)
+        shoeList.add(0, newShoe)
         _shoes.value = shoeList
         _eventShoeSave.value = true
     }

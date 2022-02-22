@@ -9,7 +9,10 @@
             name="shoe"
             type="com.udacity.shoestore.models.Shoe" />
     </data>
-    
+
+    <!-- LinearLayout is not convenient for this UI so I used ConstraintLayout.
+         Two columns of views that's why ConstraintLayout is better.
+         Otherwise I'd need nested linear layouts. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">

@@ -10,6 +10,7 @@
             type="com.udacity.shoestore.ApplicationViewModel" />
     </data>
 
+    <!-- LinearLayout is not convenient for this UI so I used ConstraintLayout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_instruction"
         android:layout_width="match_parent"

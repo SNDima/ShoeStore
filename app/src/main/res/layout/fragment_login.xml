@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
             type="com.udacity.shoestore.ApplicationViewModel" />
     </data>
 
+    <!-- LinearLayout is not convenient for this UI so I used ConstraintLayout.
+         Two columns of views that's why ConstraintLayout is better.
+         Otherwise I'd need nested linear layouts. -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layout_login"
         android:layout_width="match_parent"
@@ -73,8 +76,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="@string/login"
             android:onClick="@{() -> viewModel.onLogin()}"
+            android:text="@string/login"
             app:layout_constraintEnd_toStartOf="@+id/button_signup"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
@@ -86,8 +89,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="@string/signup"
             android:onClick="@{() -> viewModel.onSignUp()}"
+            android:text="@string/signup"
             app:layout_constraintBaseline_toBaselineOf="@+id/button_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
