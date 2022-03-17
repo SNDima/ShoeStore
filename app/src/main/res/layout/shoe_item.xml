@@ -21,8 +21,8 @@
             android:id="@+id/text_company_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/margin_start_label"
+            android:layout_marginTop="@dimen/margin_top_list_item_label"
             android:text="@string/company"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,19 +31,17 @@
             android:id="@+id/text_company"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="@dimen/margin_start_label"
             android:text="@{shoe.company}"
-            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/barrier_on_shoe_item"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/text_company_label"
             tools:text="@string/shoe_company" />
 
         <TextView
             android:id="@+id/text_name_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_top_list_item_label"
             android:text="@string/name"
             app:layout_constraintStart_toStartOf="@+id/text_company_label"
             app:layout_constraintTop_toBottomOf="@+id/text_company_label" />
@@ -53,7 +51,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{shoe.name}"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/text_company"
             app:layout_constraintTop_toTopOf="@+id/text_name_label"
             tools:text="@string/shoe_name" />
@@ -62,7 +59,7 @@
             android:id="@+id/text_size_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/margin_top_list_item_label"
             android:text="@string/size"
             app:layout_constraintStart_toStartOf="@+id/text_name_label"
             app:layout_constraintTop_toBottomOf="@+id/text_name_label" />
@@ -72,7 +69,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{String.valueOf(shoe.size)}"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/text_name"
             app:layout_constraintTop_toTopOf="@+id/text_size_label"
             tools:text="@string/shoe_size" />
@@ -80,8 +76,8 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="@dimen/line_width"
-            android:layout_marginTop="8dp"
-            android:background="@color/line_color"
+            android:layout_marginTop="@dimen/margin_top_list_item_label"
+            android:background="?attr/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/text_size_label" />

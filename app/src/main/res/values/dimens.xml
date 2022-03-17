@@ -2,6 +2,14 @@
 <resources>
     <dimen name="width_image_welcome_shoes">256dp</dimen>
     <dimen name="height_image_welcome_shoes">196dp</dimen>
-    <dimen name="text_size_button_welcome">14sp</dimen>
     <dimen name="line_width">2dp</dimen>
+    <dimen name="margin_sides_large">32dp</dimen>
+    <dimen name="margin_start_label">16dp</dimen>
+    <dimen name="margin_sides_input">16dp</dimen>
+    <dimen name="min_height_input">48dp</dimen>
+    <dimen name="margin_top_button">16dp</dimen>
+    <dimen name="margin_start_button_right">16dp</dimen>
+    <dimen name="margin_floating_button">16dp</dimen>
+    <dimen name="margin_top_list_item_label">8dp</dimen>
+    <dimen name="margin_top_details_label">32dp</dimen>
 </resources>

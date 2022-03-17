@@ -26,8 +26,8 @@
             android:id="@+id/text_company_label_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="@dimen/margin_start_label"
+            android:layout_marginTop="@dimen/margin_top_details_label"
             android:labelFor="@id/edit_company_on_details"
             android:text="@string/company"
             app:layout_constraintStart_toStartOf="parent"
@@ -37,7 +37,7 @@
             android:id="@+id/text_name_label_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/margin_top_details_label"
             android:labelFor="@id/edit_name_on_details"
             android:text="@string/name"
             app:layout_constraintStart_toStartOf="@+id/text_company_label_details"
@@ -47,7 +47,7 @@
             android:id="@+id/text_size_label_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/margin_top_details_label"
             android:labelFor="@id/edit_size_on_details"
             android:text="@string/size"
             app:layout_constraintStart_toStartOf="@+id/text_name_label_details"
@@ -57,7 +57,7 @@
             android:id="@+id/text_description_label_details"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="@dimen/margin_top_details_label"
             android:labelFor="@id/edit_description_on_details"
             android:text="@string/description"
             app:layout_constraintStart_toStartOf="@+id/text_size_label_details"
@@ -65,55 +65,44 @@
 
         <EditText
             android:id="@+id/edit_company_on_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:ems="10"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
             android:text="@={shoe.company}"
             app:layout_constraintBaseline_toBaselineOf="@+id/text_company_label_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/barrier_on_details"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck"
+            style="@style/InputStyle.Margins" />
 
         <EditText
             android:id="@+id/edit_name_on_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
             android:text="@={shoe.name}"
             app:layout_constraintBaseline_toBaselineOf="@+id/text_name_label_details"
             app:layout_constraintEnd_toEndOf="@+id/edit_company_on_details"
             app:layout_constraintStart_toStartOf="@+id/edit_company_on_details"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck"
+            style="@style/InputStyle" />
 
         <EditText
             android:id="@+id/edit_size_on_details"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ems="10"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
-            android:minHeight="48dp"
             android:text="@={`` + shoe.size}"
             app:layout_constraintBaseline_toBaselineOf="@+id/text_size_label_details"
             app:layout_constraintEnd_toEndOf="@+id/edit_name_on_details"
             app:layout_constraintStart_toStartOf="@+id/edit_name_on_details"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            tools:ignore="DuplicateSpeakableTextCheck"
+            style="@style/InputStyle" />
 
         <EditText
             android:id="@+id/edit_description_on_details"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/margin_sides_input"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/margin_sides_input"
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:lines="4"
@@ -128,28 +117,24 @@
 
         <Button
             android:id="@+id/button_cancel_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:text="@android:string/cancel"
             android:onClick="@{() -> viewModel.onCancel()}"
             app:layout_constraintEnd_toStartOf="@+id/button_save_details"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_description_on_details" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_description_on_details"
+            style="@style/FirstButtonStyle" />
 
         <Button
             android:id="@+id/button_save_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:text="@string/save"
             android:onClick="@{() -> viewModel.onSave(shoe)}"
             app:layout_constraintBaseline_toBaselineOf="@+id/button_cancel_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_cancel_details" />
+            app:layout_constraintStart_toEndOf="@+id/button_cancel_details"
+            style="@style/SecondButtonStyle" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier_on_details"

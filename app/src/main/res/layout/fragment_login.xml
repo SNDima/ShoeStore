@@ -23,45 +23,36 @@
             android:id="@+id/text_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/margin_start_label"
             android:text="@string/username"
             app:layout_constraintBaseline_toBaselineOf="@+id/edit_username"
             app:layout_constraintStart_toStartOf="parent" />
 
         <EditText
             android:id="@+id/edit_username"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
             android:autofillHints="username"
-            android:ems="10"
             android:hint="@string/enter_username"
             android:inputType="textPersonName"
-            android:minHeight="48dp"
             app:layout_constraintBottom_toTopOf="@+id/edit_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/barrier_login"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
-            tools:ignore="TextContrastCheck" />
+            style="@style/InputStyle.Margins" />
 
         <EditText
             android:id="@+id/edit_password"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:autofillHints="password"
-            android:ems="10"
             android:hint="@string/enter_password"
             android:inputType="textPassword"
-            android:minHeight="48dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/edit_username"
             app:layout_constraintTop_toBottomOf="@+id/edit_username"
-            tools:ignore="TextContrastCheck" />
+            tools:ignore="TextContrastCheck"
+            style="@style/InputStyle" />
 
         <TextView
             android:id="@+id/text_password"
@@ -73,28 +64,24 @@
 
         <Button
             android:id="@+id/button_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:onClick="@{() -> viewModel.onLogin()}"
             android:text="@string/login"
             app:layout_constraintEnd_toStartOf="@+id/button_signup"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+            app:layout_constraintTop_toBottomOf="@+id/edit_password"
+            style="@style/FirstButtonStyle" />
 
         <Button
             android:id="@+id/button_signup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:onClick="@{() -> viewModel.onSignUp()}"
             android:text="@string/signup"
             app:layout_constraintBaseline_toBaselineOf="@+id/button_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/button_login" />
+            app:layout_constraintStart_toEndOf="@+id/button_login"
+            style="@style/SecondButtonStyle" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrier_login"

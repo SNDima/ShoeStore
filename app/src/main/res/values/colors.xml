@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="textColor_primary">#AF3CC3</color>
-    <color name="textColor_buttons">#9C27B0</color>
-    <color name="line_color">#c0c0c0</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="purple">#7b1fa2</color>
+    <color name="purple_dark">#4a0072</color>
+    <color name="purple_light">#ae52d4</color>
+    <color name="pink">#a21f88</color>
+    <color name="pink_dark">#70005b</color>
+    <color name="pink_light">#d657b8</color>
 </resources>

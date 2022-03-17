@@ -19,15 +19,12 @@
 
         <TextView
             android:id="@+id/text_instruction_primary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:text="@string/primary_text_on_instruction_screen"
-            android:textColor="@color/textColor_primary"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            style="@style/HeadingStyle" />
 
         <ImageView
             android:id="@+id/image_instruction_screen"
@@ -44,17 +41,13 @@
 
         <TextView
             android:id="@+id/text_instruction_secondary"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
             android:text="@string/secondary_text_on_instructions_screen"
-            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_instruction_primary"
-            app:layout_constraintVertical_bias="0.15" />
+            app:layout_constraintVertical_bias="0.15"
+            style="@style/InstructionStyle" />
 
         <Button
             android:id="@+id/button_get_started"
@@ -64,7 +57,6 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:backgroundTint="@color/textColor_buttons"
             android:onClick="@{() -> viewModel.onOnboardingFinish()}"
             android:text="@string/get_started"
             app:layout_constraintBottom_toBottomOf="parent"
