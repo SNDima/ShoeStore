@@ -27,4 +27,8 @@
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="logout">Logout</string>
+    <string name="welcome">Welcome</string>
+    <string name="instructions">Instructions</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="shoe_details">Shoe Details</string>
 </resources>
